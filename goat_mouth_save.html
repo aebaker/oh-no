@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+
+<br/>
+<h1>Hello!</h1>
+<br/>
+<h1>Welcome!</h1>
+<br/>
+<br/>
+<h1 class="fst-italic">I owe you my life! (again)</h1>
+<br/><br/>
+
+<form method="post" action="/make_table">
+<div class="input-group mb-3">
+  <span class="input-group-text" id="pseudonym">Pseudonym or code:</span>
+  <input type="text" class="form-control" placeholder="This is only used to group your results" aria-label="Username" aria-describedby="pseudonym">
+</div>
+<br/>
+    <input type="submit" class="btn btn-outline-secondary" value="Start" name="Start"/>
+</form>
+
+<h1>{{ pseudonym }}</h1>
+
+{%endblock%}

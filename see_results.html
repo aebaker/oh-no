@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{%block content%}
+
+
+<h2 class="fw-light fs-7">Results: final</h2>
+
+<br/>
+
+
+<table class="table align-middle">
+  <thead class="table-dark">
+    <tr>
+      <th class="fw-light fs-7" scope="col">Variety</th>
+      <th class="fw-light fs-7" scope="col">Percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for result in results_data %}
+    <tr>
+      <th class="fw-normal fs-7" scope="row">{{ result[0] }}</th>
+      <td>{{ result[1] }} %</td>
+      <td>{{ result[2] }}</td>
+      <td>{{ result[3] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{%endblock%}
